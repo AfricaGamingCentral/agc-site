@@ -3,9 +3,9 @@
 This is the home of Africa Gaming Central's website. 
 
 ## Tech Stack
-- Flask
+- [Flask](http://flask.pocoo.org)
 - Python 2.7
-- Bootstrap 4
+- [Bootstrap 4](http://getbootstrap.com)
 
 ## Installation Instructions
 - `$ git clone https://github.com/djbotha/agc-site.git`
