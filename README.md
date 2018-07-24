@@ -16,4 +16,4 @@ This is the home of Africa Gaming Central's website.
 - `$ export FLASK_APP=app.py && export FLASK_ENV=development`
 - `$ flask run`
 
-To install any aditional packages (like mysql, WTForms, or whatever your heart desires), make sure you are in your env (`env` on your prompt) and run `pip install <packagename>`.
+To install any aditional packages (like mysql, WTForms, or whatever your heart desires), make sure you are in your env (`(env)` on your prompt) and run `pip install <packagename>`.
