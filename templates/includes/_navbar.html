@@ -1,38 +1,55 @@
 <header class='container'>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-purple">
-        <img src="../../static/icons/logo_alpha.png" height="32" style="margin-right: 0.5rem;" alt="Glaze">
-        <a class="navbar-brand" href="/">Glaze</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white agc-nav-bottom-border">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
+
+        <div class="agc-logo-container">
+            <!-- <img class="agc-main-logo" src="/static/icons/main-logo.png"> -->
+        </div>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-            <a class="nav-link" id='home' href="/">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" id='about' href="/about">About</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" id='contact' href="/contact">Contact</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav navbar-right">
-            {% if session.logged_in %}
-                {% if session.admin %}  
+            <ul class="navbar-nav ml-auto">
+                {% if session.logged_in %} 
+                    {% if session.admin %}
+                        <li>
+                            <a class="nav-link" href="/dashboard">Dashboard</a>
+                        </li>
+                    {% endif %}
+
                     <li>
-                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                        <a class="nav-link" href="/logout">Logout</a>
                     </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" id='about' href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" id='ourRoles' href="#">OUR ROLES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" id='weeklyChallenge' href="#">WEEKLY CHALLENGE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" id='stats' href="#">STATISTICS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" href="/login">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" id='contact' href="#">CONTACT</a>
+                </li>
                 {% endif %}
-                <li>
-                    <a class="nav-link" href="/logout">Logout</a>
-                </li>
-            {% else %}
-                <li>
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-            {% endif %}
-        </ul>
+            </ul>
         </div>
     </nav>
 </header>
+
+<!-- ABOUT
+TEAM
+OUR ROLES
+WEEKLY CHALLENGE
+STATISTICS
+LOGIN
+CONTACT -->
