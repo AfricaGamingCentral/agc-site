@@ -5,40 +5,45 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <div class="agc-logo-container">
-            <img class="agc-main-logo" src="/static/icons/main-logo.png">
+        <div class="agc-logo-container" id="logoContainer">
+            <a href="#welcomeSection">
+                <img class="agc-main-logo" src="/static/icons/main-logo.png">
+            </a>
         </div>
 
         <div class="collapse navbar-collapse align-bottom" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 {% if session.logged_in %} 
-                    {% if session.admin %}
-                        <li>
-                            <a class="nav-link" href="/dashboard">Dashboard</a>
-                        </li>
-                    {% endif %}
-
+                {% if session.admin %}
                     <li>
-                        <a class="nav-link" href="/logout">Logout</a>
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
                     </li>
+                {% endif %}
+
+                <li>
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link agc-nav-link" id='about' href="#">ABOUT</a>
+                    <a class="nav-link agc-nav-link" id='about' href="#aboutSection">ABOUT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link agc-nav-link" id='ourRoles' href="#">OUR ROLES</a>
+                    <a class="nav-link agc-nav-link" id='team' href="#teamSection">TEAM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link agc-nav-link" id='weeklyChallenge' href="#">WEEKLY CHALLENGE</a>
+                    <a class="nav-link agc-nav-link" id='ourRoles' href="#rolesSection">OUR ROLES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link agc-nav-link" id='stats' href="#">STATISTICS</a>
+                    <a class="nav-link agc-nav-link" id='weeklyChallenge' href="#challengeSection">WEEKLY CHALLENGE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link agc-nav-link" id='stats' href="#statsSection">STATISTICS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link agc-nav-link" href="/login">LOGIN</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link agc-nav-link" id='contact' href="#">CONTACT</a>
+                    <a class="nav-link agc-nav-link" id='contact' href="#contactSection">CONTACT</a>
                 </li>
                 {% endif %}
             </ul>

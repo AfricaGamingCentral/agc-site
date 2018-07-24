@@ -22,7 +22,7 @@ This is the home of Africa Gaming Central's website.
 - `$ cd agc-site`
 - `$ pip install virtualenv` (if you don't have `virtualenv` on your machine yet)
 - `$ virtualenv env`
-- `$ env\Scripts\activate` (your prompt should show (env) now)
+- `$ env\Scripts\activate` (your prompt should show `(env)` now)
 - `$ pip install flask`
 - `$ set FLASK_APP=app.py && set FLASK_ENV=development`
 - `$ flask run`

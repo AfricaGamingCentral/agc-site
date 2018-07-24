@@ -13,7 +13,7 @@ body {
     position: relative;
     z-index: 999;
     top: 0;
-    left: 220px;
+    left: 100px;
 }
 
 .agc-nav-bottom-border {
@@ -35,4 +35,31 @@ hr.agc-hr {
     background-image: -moz-linear-gradient(left, #f0f0f00a, #8c8b8b, #f0f0f00a);
     background-image: -ms-linear-gradient(left, #f0f0f00a, #8c8b8b, #f0f0f00a);
     background-image: -o-linear-gradient(left, #f0f0f00a, #8c8b8b, #f0f0f00a);
+}
+
+h3 {
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(190, 20, 38);
+}
+
+.agc-sub-heading {
+    color: rgb(190, 20, 38);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.agc-image-item {
+    width: 266px;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    margin-bottom: 1px;
+    float: left;
+}
+
+.active {
+    color: rgb(222, 222, 222) !important;
 }
