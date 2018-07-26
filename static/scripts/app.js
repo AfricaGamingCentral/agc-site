@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    $(document).on("scroll", function () {
+
+        if ($(document).scrollTop() > 100) {
+            $("#logoContainer").removeClass("large").addClass("small");
+            $("#siteLogo").attr("src","/static/icons/main-logo-small.png");
+        } else {
+            $("#logoContainer").removeClass("small").addClass("large");
+            $("#siteLogo").attr("src","/static/icons/main-logo.png");
+        }
+
+    });
+
     // Add scrollspy to <body>
     $('body').scrollspy({
         target: ".navbar",
@@ -39,7 +51,7 @@ $(document).ready(function () {
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: 0
-            }, 800, function () {                
+            }, 800, function () {
                 return false;
             });
         } // End if
