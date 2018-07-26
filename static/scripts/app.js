@@ -34,7 +34,6 @@ $(document).ready(function () {
             $hash = $(hash);
 
             if (location.pathname.includes("roles") || location.pathname.includes("stats") || location.pathname.includes("contact")) {
-
                 window.location.href = "/" + this.hash;
 
                 return false;
@@ -42,7 +41,7 @@ $(document).ready(function () {
 
             $('html, body').stop().animate({
                 'scrollTop': $hash.offset().top + 2 // scrolls to the link
-            }, 500, 'swing', function () {
+            }, 800, 'swing', function () {
                 window.location.hash = hash;
             });
 
@@ -57,12 +56,20 @@ $(document).ready(function () {
 
             // Store hash
             var hash = this.hash;
+            $hash = $(hash);
+
+            if (location.pathname.includes("roles") || location.pathname.includes("stats") || location.pathname.includes("contact")) {
+                                
+                window.location.href = "/";
+
+                return false;
+            }
 
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: 0
-            }, 800, function () {
+            $('html, body').stop().animate({
+                'scrollTop': 0 // scrolls to top
+            }, 800, 'swing', function () {
                 return false;
             });
         } // End if
