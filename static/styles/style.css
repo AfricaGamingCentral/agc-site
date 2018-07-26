@@ -64,7 +64,8 @@ h3 {
     color: rgb(222, 222, 222) !important;
 }
 
-.small, .small img {
+.small,
+.small img {
     height: 50px;
 }
 
@@ -76,9 +77,176 @@ h3 {
     height: 225px;
 }
 
-#logoContainer, #logoContainer img {
+#logoContainer,
+#logoContainer img {
     transition: .7s all;
     -moz-transition: .7s all;
     -webkit-transition: .7s all;
     -o-transition: .7s all;
+}
+
+/* Media Queries */
+
+/*--- Mobile portrait ---*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #logoContainer img {
+        content:url("/static/icons/main-logo-small.png");
+    }
+
+    .agc-logo-container {
+        height: 50px;
+    }
+
+    .agc-main-logo {
+        left: 0;
+    }
+
+    .large img {
+        height: 50px;
+    }
+
+    .agc-body-container {
+        margin-top: 100px;
+    }
+
+    #modsHeading {
+        margin-top: 28.5rem!important;
+    }
+
+    #partnersHeading {
+        margin-top: 28.5rem!important;
+    }
+}
+
+/*--- Mobile landscape ---*/
+@media only screen and (min-width: 480px) and (max-width: 595px) {
+    #logoContainer img {
+        content:url("/static/icons/main-logo-small.png");
+    }
+
+    .agc-logo-container {
+        height: 50px;
+    }
+
+    .agc-main-logo {
+        left: 0;
+    }
+
+    .large img {
+        height: 50px;
+    }
+
+    .agc-body-container {
+        margin-top: 100px;
+    }
+
+    #modsHeading {
+        margin-top: 28.5rem!important;
+    }
+
+    #partnersHeading {
+        margin-top: 28.5rem!important;
+    }
+}
+
+/*--- Small tablet portrait ---*/
+@media only screen and (min-width: 595px) and (max-width: 690px) {
+    #logoContainer img {
+        content:url("/static/icons/main-logo-small.png");
+    }
+
+    .agc-logo-container {
+        height: 50px;
+    }
+
+    .agc-main-logo {
+        left: 0;
+    }
+
+    .large img {
+        height: 50px;
+    }
+
+    .agc-body-container {
+        margin-top: 100px;
+    }
+
+    #modsHeading {
+        margin-top: 28.5rem!important;
+    }
+
+    #partnersHeading {
+        margin-top: 28.5rem!important;
+    }
+}
+
+/*--- Tablet portrait ---*/
+@media only screen and (min-width: 690px) and (max-width: 800px) {
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 12px;
+    }
+
+    #logoContainer img {
+        content:url("/static/icons/main-logo-small.png");
+    }
+
+    .agc-logo-container {
+        height: 50px;
+    }
+
+    .agc-main-logo {
+        left: 0;
+    }
+
+    .large img {
+        height: 50px;
+    }
+
+    .agc-body-container {
+        margin-top: 100px;
+    }
+
+    #modsHeading {
+        margin-top: 13.5rem!important;
+    }
+
+    #partnersHeading {
+        margin-top: 13.5rem!important;
+    }
+}
+
+/*--- Small tablet landscape ---*/
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+    
+}
+
+/*--- Tablet landscape --- */
+@media only screen and (min-width: 1024px) and (max-width: 1224px) {
+    #logoContainer img {
+        content:url("/static/icons/main-logo-small.png");
+    }
+
+    .agc-logo-container {
+        height: 50px;
+    }
+
+    .agc-main-logo {
+        left: 0;
+    }
+
+    .large img {
+        height: 50px;
+    }
+
+    .agc-body-container {
+        margin-top: 100px;
+    }
+
+    #modsHeading {
+        margin-top: 13.5rem!important;
+    }
+
+    #partnersHeading {
+        margin-top: 13.5rem!important;
+    }
 }
