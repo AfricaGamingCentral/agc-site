@@ -1,12 +1,17 @@
 $(document).ready(function () {
+    if ($(document).scrollTop() != 0) {
+        $("#logoContainer").removeClass("large").addClass("small");
+        $("#siteLogo").attr("src", "/static/icons/main-logo-small.png");
+    };
+
     $(document).on("scroll", function () {
 
         if ($(document).scrollTop() > 100) {
             $("#logoContainer").removeClass("large").addClass("small");
-            $("#siteLogo").attr("src","/static/icons/main-logo-small.png");
+            $("#siteLogo").attr("src", "/static/icons/main-logo-small.png");
         } else {
             $("#logoContainer").removeClass("small").addClass("large");
-            $("#siteLogo").attr("src","/static/icons/main-logo.png");
+            $("#siteLogo").attr("src", "/static/icons/main-logo.png");
         }
 
     });
@@ -26,15 +31,21 @@ $(document).ready(function () {
 
             // Store hash
             var hash = this.hash;
+            $hash = $(hash);
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
+            if (location.pathname.includes("roles") || location.pathname.includes("stats") || location.pathname.includes("contact")) {
+
+                window.location.href = "/" + this.hash;
+
+                return false;
+            }
+
+            $('html, body').stop().animate({
+                'scrollTop': $hash.offset().top + 2 // scrolls to the link
+            }, 500, 'swing', function () {
                 window.location.hash = hash;
             });
+
         } // End if
     });
 
@@ -56,4 +67,12 @@ $(document).ready(function () {
             });
         } // End if
     });
+
+    // if (location.pathname.includes("roles") || location.pathname.includes("stats") || location.pathname.includes("contact")) {
+    //     $("#logoContainer a").attr("href", "/");
+
+    //     $("#about").attr("href", "/");
+    //     $("#team").attr("href", "/");
+    //     $("#weeklyChallenge").attr("href", "/");
+    // }
 });
